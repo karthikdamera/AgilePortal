@@ -1,0 +1,304 @@
+/* You can add global styles to this file, and also import other style files */
+
+$color-white:#ffffff;
+$bar-color:grey;
+$theme-light:red;
+$theme-blue-light:green;
+$color-black:#000000;
+$background-color:rgba(179,210,238,0.1) ;
+$icon-color:rgba(77,144,254,0.9);
+$break-small: 320px;
+$break-large: 1200px;
+$sucess:rgba(148,203,113, 1);
+$warning:rgba(204,0,0,1);
+%icons{
+  color: blue;
+  line-height: 37px;
+  font-size: 20px;
+}
+body {
+  background: $background-color;
+/*header*/
+    .navbar-toggler-icon{
+      background-image: url(http://cssmenumaker.com/sites/default/files/blog_teaser_images/responsive_menu.png) !important;
+
+    }
+  .navbar-expand-lg
+
+  .nav-flex-icons{
+    margin: 0;
+  }
+  .navbar-nav{
+    margin: 0 auto;
+    font-size: 14px;
+
+  }
+  .navbar {
+    background: #fff;
+    .container{
+      max-width: 100%;
+    }
+    .brand_logo {
+   img{
+      width: 100px;
+    }
+    }
+    .nav-item {
+    .nav-link {
+      color: $bar-color !important;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+  }
+  /*---breadcrumb---*/
+  .breadcrumb {
+    background: none;
+    h3{
+      color:$icon-color;
+      font-weight: 400;
+    }
+     a{
+    line-height: 2.5em;
+    margin: 1em;
+    color:gray;
+  }
+  }
+  /*---Dropdown---*/
+  .btn-modified{
+    background:none;
+    box-shadow: none;
+    color: #000;
+    border:1px solid #d3d3d3;
+    padding: 0.84rem 0.9rem 0.83em 1em;
+  }
+  /*--flow--*/
+  %pseudo-block{
+    background-image: url(/assets/img/right.png);
+    background-size: 62px;
+    display: inline-block;
+    width: 62px;
+    height: 28px;
+    background-repeat: no-repeat;
+    content: "";
+    margin: 3em 0px 0 -2px;
+  }
+  %flowstyle{
+    padding: 1em;
+    display: block;
+    margin: 0;
+    border: 1px solid $icon-color;
+    text-align: center;
+    border-radius: 4px;
+    color: $icon-color;
+  }
+  .main-flow{
+    list-style-type: none;
+    display: inline-flex;
+
+    .flow-count{
+    @extend %flowstyle;
+      max-width: 100px;
+      min-width: 100px;
+      .text-color{
+        color:$bar-color;
+      }
+    }
+    &:after {
+@extend %pseudo-block;
+    }
+  }
+  .main-flow:last-child::after {
+    background-image: url(/assets/img/child.png);
+    background-size: 80px;
+    display: inline-block;
+    width: 80px;
+    height: 90px;
+    background-repeat: no-repeat;
+    content: "";
+    margin: 0em 0px 0 -2px;
+  }
+  .child-flow{
+    list-style-type: none;
+    display: block;
+    margin:0.5em;
+    .flow-count{
+      @extend %flowstyle;
+      border:1px solid $sucess;
+      padding: 0.5em;
+      max-width: 70px;
+      min-width: 70px;
+      p{
+        margin:0;
+        padding: 0;
+      }
+      .text-color{
+        color:$sucess;
+      }
+      .sub-text-color{
+        color:$bar-color;
+      }
+    }
+    .flow-count1{
+      @extend %flowstyle;
+      border: 1px solid $warning;
+      .text-color{
+       color:$warning;
+      }
+      .sub-text-color{
+        color:$bar-color;
+      }
+    }
+  }
+  /*--end flow--*/
+}
+.interview-schedule{
+  h1{
+    font-size: 16px;
+  }
+  p{
+    font-size:14px;
+    color: rgba(128,128,128,1);
+    font-weight: 500;
+    margin-bottom:1rem;
+  }
+  .text-color{
+    color: rgba(128,128,128,0.7);
+    font-weight: 500;
+  }
+
+}
+.ng-scrollbar-container{
+  height: calc(100vh - 120px) !important;
+  overflow: inherit !important;
+}
+
+.fa-bell:before,.fa-plus-circle:before{
+  color: $icon-color;
+  line-height: 37px;
+  font-size: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 600;
+}
+.notification {
+.main-text{
+  color:$color-black;
+  font-weight: 500;
+}  .dropdown-item {
+    &:hover, &:focus {
+      text-decoration: none;
+      background-color: #c7e0f9 !important;
+      color: #000000 !important;
+      font-weight: 500 !important;
+      border-left: 3px solid #007bff;
+    }
+    .text-color{
+      color: rgba(128,128,128,0.7);
+      font-weight: 500;
+    }
+      }
+  .notification-color{
+    color:#007bff !important;
+  }
+  .w3-badge, .w3-tag {
+    background-color: #007bff !important;
+    color: #fff;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    border-radius:0px !important; ;
+  }
+}
+.custom-control-label::before{
+  background: none !important;
+  border: 1px solid #dee2e6 !important;
+}
+.custom-control-label::after{
+  border: 1px solid $bar-color;
+}
+.nav-item {
+  .dropdown-menu {
+    right: 0;
+    top: 1.5rem;
+    left: inherit;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    opacity: 0;
+    border: none;
+    width: 24rem;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    animation-name: fadeInDown;
+    &.show {
+      opacity: 1;
+    }&::before{
+           content: "";
+           border-bottom: 10px solid #fff;
+           border-right: 10px solid transparent;
+           border-left: 10px solid transparent;
+           position: absolute;
+           top: -10px;
+           right: 16px;
+           z-index: 10;
+         }
+    &::after {
+      content: "";
+      border-left: 1rem solid transparent;
+      border-right: 1rem solid transparent;
+      width: 0;
+      height: 0;
+      top: -1rem;
+      position: absolute;
+      right: 1.6rem;
+    }
+    .dropdown-item {
+      // display: inline-block;
+      padding: 9px;
+      margin: 0;
+      float: left;
+      &:hover {
+        background-color: #c7e0f9 !important;
+        color:#007bff;
+        display: inline-block;
+        font-weight: 500;
+      }
+      .dropdown-toggle::after{
+        border-top:0px;
+      }
+
+    }
+  }
+  //badge-class
+  .badge1 {
+    position:relative;
+  }
+  .badge1[data-badge]::after {
+    content: attr(data-badge);
+    position: absolute;
+    top: 1px;
+    right: 14px;
+    font-size: .7em;
+    background: orange;
+    color: white;
+    width: 9px;
+    height: 9px;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 50%;
+    box-shadow: 0 0 1px #333;
+  }
+}
+@media screen and (min-width: 320px)and (max-width: 767px){
+.flow-block{
+zoom:60%;
+  }
+
+  .nav-item {
+    left:1px;
+  }
+}
+
+
+
